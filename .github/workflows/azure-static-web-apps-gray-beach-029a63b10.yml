@@ -1,4 +1,4 @@
-name: Gray beach for firebase
+name: Gray beach for firebase auth
 
 on:
   push:
