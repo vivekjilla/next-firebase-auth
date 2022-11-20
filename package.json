@@ -1,6 +1,6 @@
 {
   "name": "next-firebase-auth",
-  "version": "0.14.4-alpha.0",
+  "version": "0.14.4",
   "description": "Simple Firebase authentication for all Next.js rendering strategies",
   "keywords": [
     "Next",
@@ -46,7 +46,7 @@
     "babel-jest": "^28.1.0",
     "babel-loader": "^8.2.5",
     "babel-plugin-module-resolver": "^4.1.0",
-    "copy-webpack-plugin": "^10.2.4",
+    "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.22.4",
     "eslint": "^8.15.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -59,7 +59,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "firebase": "^8.8.1",
-    "firebase-admin": "^10.0.0",
+    "firebase-admin": "^11.0.0",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "mockdate": "^3.0.2",
@@ -81,7 +81,7 @@
   },
   "peerDependencies": {
     "firebase": ">=7.0.0 <9",
-    "firebase-admin": ">=9.0.0 <11",
+    "firebase-admin": ">=9.0.0 <12",
     "next": ">=9.5.0 <13",
     "react": ">=16.8.0 <19",
     "react-dom": ">=16.8.0 <19"
