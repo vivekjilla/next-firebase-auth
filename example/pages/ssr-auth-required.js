@@ -38,7 +38,14 @@ const Demo = ({ favoriteColor }) => {
   )
 }
 
-export const getServerSideProps = withAuthUserTokenSSR({
+
+export const getServerSideProps = async (ctx) => {
+  console.log(ctx.req.rawHeaders)
+  console.log("---------------custom ssr----------")
+  return await getServerSideProps1(ctx)
+};
+
+const getServerSideProps1 = withAuthUserTokenSSR({
   whenUnauthed: AuthAction.REDIRECT_TO_LOGIN,
 })(async ({ AuthUser, req }) => {
   // Optionally, get other props.
