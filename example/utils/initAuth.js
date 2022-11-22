@@ -44,7 +44,7 @@ const initAuth = () => {
       if (destinationParamVal) {
         // Verify the redirect URL host is allowed.
         // https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/11-Client_Side_Testing/04-Testing_for_Client_Side_URL_Redirect
-        const allowedHosts = ['localhost:3000', 'nfa-example.vercel.app']
+        const allowedHosts = ['localhost:3000', 'green-island-0d2143610.2.azurestaticapps.net']
         const allowed =
           allowedHosts.indexOf(new URL(destinationParamVal).host) > -1
         if (allowed) {
