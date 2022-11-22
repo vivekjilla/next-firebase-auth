@@ -21,6 +21,16 @@ jobs:
       - name: Build And Deploy
         id: builddeploy
         uses: vivekjilla/staticstiesactionoryx@private
+        env:
+          FIREBASE_CLIENT_EMAIL: "firebase-adminsdk-1isrr@sample-vijilla.iam.gserviceaccount.com"
+          NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY: "AIzaSyDZaHV1RV5ntRP0d4qXatbnJ1RMrN536dI"
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: "sample-vijilla.firebaseapp.com"
+          NEXT_PUBLIC_FIREBASE_DATABASE_URL: "https://sample-vijilla-default-rtdb.firebaseio.com"
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID: "sample-vijilla"
+          COOKIE_SECRET_CURRENT: "b3ec3ed75df9155891c20c05eb333ffb"
+          COOKIE_SECRET_PREVIOUS: "2de85bead1db9704256ec1e2f15ccff4"
+          NEXT_PUBLIC_COOKIE_SECURE: true
+          FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ASHY_MUSHROOM_03CE84012 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
