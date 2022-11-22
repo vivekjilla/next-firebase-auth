@@ -17,9 +17,11 @@ const initAuth = () => {
       const origin = isServerSide
         ? absoluteUrl(ctx.req).origin
         : window.location.origin
+      console.log("origin: "+ origin)
       const destPath =
         typeof window === 'undefined' ? ctx.resolvedUrl : window.location.href
-      const destURL = new URL(destPath, origin)
+      console.log("destPath: "+ destPath)
+      const destURL = new URL(destPath, "https://green-island-0d2143610.2.azurestaticapps.net")
       return `auth-ssr?destination=${encodeURIComponent(destURL)}`
     },
 
