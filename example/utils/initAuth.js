@@ -5,6 +5,7 @@ import absoluteUrl from 'next-absolute-url'
 const TWELVE_DAYS_IN_MS = 12 * 60 * 60 * 24 * 1000
 
 const initAuth = () => {
+  console.log("private key is: "+ process.env.FIREBASE_PRIVATE_KEY);
   init({
     debug: true,
 
@@ -68,9 +69,7 @@ const initAuth = () => {
         // Using JSON to handle newline problems when storing the
         // key as a secret in Vercel. See:
         // https://github.com/vercel/vercel/issues/749#issuecomment-707515089
-        privateKey:  process.env.FIREBASE_PRIVATE_KEY
-        ? JSON.parse(process.env.FIREBASE_PRIVATE_KEY)
-        : undefined,
+        privateKey:  process.env.FIREBASE_PRIVATE_KEY,
       },
       databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
     },
