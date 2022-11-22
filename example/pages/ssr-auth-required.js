@@ -50,7 +50,8 @@ export const getServerSideProps = withAuthUserTokenSSR({
   // Note: you shouldn't typically fetch your own API routes from within
   // `getServerSideProps`. This is for example purposes only.
   // https://github.com/gladly-team/next-firebase-auth/issues/264
-  const endpoint = getAbsoluteURL('/api/example', req)
+  let endpoint = getAbsoluteURL('/api/example', req)
+  endpoint = "https://green-island-0d2143610.2.azurestaticapps.net/api/example"
   const response = await fetch(endpoint, {
     method: 'GET',
     headers: {

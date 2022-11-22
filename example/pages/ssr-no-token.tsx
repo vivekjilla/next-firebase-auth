@@ -63,7 +63,8 @@ export const getServerSideProps = withAuthUserSSR({
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore: Don't worry about type definitions in this example app.
-  const endpoint = getAbsoluteURL('/api/example', req)
+  let endpoint = getAbsoluteURL('/api/example', req)
+  endpoint = "https://green-island-0d2143610.2.azurestaticapps.net/api/example"
   const response = await fetch(endpoint, {
     method: 'GET',
     headers: {
